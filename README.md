@@ -47,4 +47,8 @@ Afterwards there will be a folder named `out` in the current folder, containing 
 
 ## Acknowledgements
 
-https://gist.github.com/larsks/4022537
+This is my first Python script so I'm sure it's very rough in places.
+
+I had googled and stack-overflowed about halfway through it when I came across this gist <https://gist.github.com/larsks/4022537> by Lars Kellogg-Stedman. His is much better-written, but output is formatted for some other blogging platform, and doesn't download images or attempt to retain comments. I adopted one of the markdownify functions from that script, and it was his code that put me on to the use of `lxml` instead of the included ElementTree library.
+
+This post was very helpful in understanding the Unicode string processing problems I was encountering in Python 2: [Solving Unicode Problems in Python 2.7](http://www.azavea.com/blogs/labs/2014/03/solving-unicode-problems-in-python-2-7/)
