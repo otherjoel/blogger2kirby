@@ -215,7 +215,8 @@ def write_output(posts, comment_footers):
 			os.path.join(foldername, 'article.text.txt'), 
 			'w', encoding='utf-8') as fd:
 			fd.write('Title: %s\n----\n' % article.title)
-			fd.write('Date: %s\n----\n' % article.date.strftime("%Y-%M-%d"))
+			fd.write('Date: %04d-%02d-%02d\n----\n' % (article.date.year,
+				article.date.month, article.date.day))
 			fd.write('Tags: %s\n----\n' % article.tags)
 			fd.write('Text: %s' % markdownify(soup))
 
