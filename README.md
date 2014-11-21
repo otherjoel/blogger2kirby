@@ -22,10 +22,13 @@ The script also requires these libraries:
 
 * `lxml`, for parsing XML
 * `BeautifulSoup`, for parsing HTML
-* `python-rfc3339`, for parsing Atom timestamps in RFC3339 format (<https://github.com/tonyg/python-rfc3339>)
+* `python-rfc3339`, for parsing Atom timestamps in RFC3339 format (<https://github.com/tonyg/python-rfc3339>) -- note, at this time Python has no native support for parsing strings in this format. There is an [open issue][oip] for this in Python's bug tracker, and the [latest comment][lcp] on that page identifies the above library as being the best one for the job.
 * `requests`, for downloading images over HTTP
 
-On my Mac running Yosemite, the simplest way to get all these prerequisites was to install Homebrew, then run the following commands:
+[oip]: http://bugs.python.org/issue15873
+[lcp]: http://bugs.python.org/issue15873#msg221903
+
+On my Mac running Yosemite, the simplest way to get all these prerequisites was to [install Homebrew](http://brew.sh), then run the following commands:
 
     brew install python3
     pip3 install git+https://github.com/tonyg/python-rfc3339.git
